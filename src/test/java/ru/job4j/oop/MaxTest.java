@@ -80,4 +80,5 @@ public class MaxTest {
         int expected = 100;
         Assert.assertEquals(expected, result);
     }
+
 }
