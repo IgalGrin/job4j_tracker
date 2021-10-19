@@ -26,4 +26,5 @@ public class TriangleTest {
         double rsl = triangle.area();
         assertThat(rsl, closeTo(-1, 0.001));
     }
+
 }
