@@ -22,4 +22,5 @@ public class Point {
         double dist = a.distance(b);
         System.out.println(dist);
     }
+
 }
