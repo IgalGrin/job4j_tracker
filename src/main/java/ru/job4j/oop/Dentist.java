@@ -11,4 +11,5 @@ public class Dentist extends Doctor {
     public String getSpecialization() {
         return specialty;
     }
+
 }

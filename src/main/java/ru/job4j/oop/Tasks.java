@@ -22,4 +22,5 @@ public class Tasks {
     public String getTaskThree() {
         return taskThree;
     }
+
 }
