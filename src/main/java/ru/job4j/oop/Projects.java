@@ -10,5 +10,4 @@ public class Projects {
     public String getProjectOne() {
         return project;
     }
-
 }

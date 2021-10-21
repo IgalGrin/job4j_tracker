@@ -11,5 +11,4 @@ public class Diagnosis {
     public String getDiagnos() {
         return diagnos;
     }
-
 }
