@@ -7,7 +7,7 @@ public class Engineer extends Profession {
     }
 
     public Projects job(Tasks task) {
-
+return new Projects("");
     }
 
 }

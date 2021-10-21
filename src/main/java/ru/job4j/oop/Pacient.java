@@ -11,5 +11,4 @@ public class Pacient extends Profession {
     public String getAches() {
         return aches;
     }
-
 }

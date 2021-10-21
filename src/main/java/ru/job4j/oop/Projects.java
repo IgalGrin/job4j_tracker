@@ -1,26 +1,14 @@
 package ru.job4j.oop;
 
 public class Projects {
-    private String projectOne;
-    private String projectTwo;
-    private String projectThree;
+    private String project;
 
-    public Projects(String projectOne, String projectTwo, String projectThree) {
-        this.projectOne = projectOne;
-        this.projectTwo = projectTwo;
-        this.projectThree = projectThree;
+    public Projects(String projectOne) {
+        this.project = project;
     }
 
     public String getProjectOne() {
-        return projectOne;
-    }
-
-    public String getProjectTwo() {
-        return projectTwo;
-    }
-
-    public String getProjectThree() {
-        return projectThree;
+        return project;
     }
 
 }
