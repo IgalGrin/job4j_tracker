@@ -3,11 +3,11 @@ package ru.job4j.inheritance;
 public class Projects {
     private String project;
 
-    public Projects(String projectOne) {
+    public Projects(String project) {
         this.project = project;
     }
 
-    public String getProjectOne() {
+    public String getProject() {
         return project;
     }
 }

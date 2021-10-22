@@ -3,13 +3,13 @@ package ru.job4j.inheritance;
 public class Profession {
     private String name;
     private String surname;
-    private String educ;
+    private String education;
     private String birthday;
 
-    Profession(String name, String surname, String educ, String birthday) {
+    public Profession(String name, String surname, String education, String birthday) {
        this.name = name;
        this.surname = surname;
-       this.educ = educ;
+       this.education = education;
        this.birthday = birthday;
     }
 
@@ -22,11 +22,10 @@ public class Profession {
     }
 
     public String getEducation() {
-        return educ;
+        return education;
     }
 
     public String getBirthday() {
         return birthday;
     }
-
 }

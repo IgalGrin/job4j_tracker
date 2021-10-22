@@ -5,7 +5,6 @@ public class Diagnosis {
 
     public Diagnosis(String diagnos) {
         this.diagnos = diagnos;
-
     }
 
     public String getDiagnos() {
