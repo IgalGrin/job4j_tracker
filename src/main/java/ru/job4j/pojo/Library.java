@@ -1,23 +1,6 @@
 package ru.job4j.pojo;
 
 public class Library {
-    public static Book[] swapBorder(Book[] array) {
-        Book temp = array[0];
-        array[0] = array[array.length - 1];
-        array[array.length - 1] = temp;
-        return array;
-    }
-
-    public static Book findBook(Book[] array) {
-        Book reply = array[0];
-        Book request = new Book("Clean code", 460);
-        for (Book exemplar : array) {
-            if (exemplar.equals(request)) {
-                reply = exemplar;
-            }
-        }
-        return reply;
-        }
 
     public static void main(String[] args) {
         Book bookOne = new Book("The Adventures of Tom Sawer", 160);
@@ -34,13 +17,18 @@ public class Library {
             System.out.println(s);
         }
         System.out.println();
-        Book[] change = swapBorder(books);
-        for (int index = 0; index < books.length; index++) {
-            Book exemplar = change[index];
-            System.out.println(exemplar.getName() + " - " + exemplar.getPages());
+        Book temp = books[0];
+        books[0] = books[3];
+        books[3] = temp;
+        for (Book book : books) {
+            String s = book.getName() + " - " + book.getPages();
+            System.out.println(s);
         }
         System.out.println();
-        Book find = Library.findBook(books);
-        System.out.println(find.getName() + " - " + find.getPages());
+        for (Book book : books) {
+            if ("Clean code".equals(book.getName())) {
+                System.out.println(book.getName() + " - " + book.getPages());
+            }
+        }
 }
 }
