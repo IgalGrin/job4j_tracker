@@ -14,6 +14,6 @@ public class MagicBall {
         } else if (random == 1) {
             answer = "Нет";
         }
-        System.out.println(answer);
+        System.out.println("Ответ на вопрос " + question + ": " + answer);
     }
 }
