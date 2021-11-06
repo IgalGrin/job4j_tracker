@@ -8,4 +8,5 @@ public class Square implements Shape {
                 + "|    |" + ln
                 + "|____|" + ln;
     }
+
 }
