@@ -34,7 +34,7 @@ public class StartUI {
     }
 
     public static void deleteItem(Input input, Tracker tracker) {
-                System.out.println("=== Delete item ===");
+                System.out.println("=== Delete an item ===");
                 int id = input.askInt("Enter id: ");
                 if (tracker.delete(id)) {
                     System.out.println("Заявка удалена успешно.");
@@ -70,7 +70,7 @@ public class StartUI {
     public void init(Input input, Tracker tracker) {
         boolean run = true;
         while (run) {
-            showMenu();
+            this.showMenu();
             int select = input.askInt("Select: ");
             if (select == 0) {
                 StartUI.createItem(input, tracker);
