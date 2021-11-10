@@ -84,7 +84,7 @@ public class StartUITest {
     }
 
     @Test
-    public void whenShowAllTestOutputIsSuccessful() {
+    public void whenShowAllTestOutputIsEmpty() {
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Input in = new StubInput(
@@ -110,7 +110,7 @@ public class StartUITest {
     }
 
     @Test
-    public void whenFindByNameTestOutputIsSuccessful() {
+    public void whenFindByNameTestOutputIsEmpty() {
        String name = "test";
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
@@ -137,7 +137,7 @@ public class StartUITest {
     }
 
     @Test
-    public void whenFindByIdTestOutputIsSuccessful() {
+    public void whenFindByIdTestOutputIsEmpty() {
         String id = "5";
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
