@@ -9,9 +9,11 @@ public class UserStore {
              ) {
            if (Objects.equals(find.getUsername(), login)) {
                user = find;
-           } else {
-               throw new UserNotFoundException("user not found");
+               break;
            }
+        }
+        if (user == null) {
+            throw new UserNotFoundException("user not found");
         }
         return user;
     }
@@ -32,6 +34,8 @@ public class UserStore {
         if (validate(user)) {
             System.out.println("This user has an access");
         }
+        } catch (UserInvalidException ui) {
+            ui.printStackTrace();
         } catch (UserNotFoundException unf) {
             unf.printStackTrace();
         }
