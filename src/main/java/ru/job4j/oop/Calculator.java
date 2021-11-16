@@ -1,7 +1,7 @@
 package ru.job4j.oop;
 
 public class Calculator {
-    static private int x = 5;
+    private static int x = 5;
 
     public static int sum(int y) {
         return x + y;
@@ -12,7 +12,7 @@ public class Calculator {
     }
 
     public static int minus(int b) {
-        return x - b;
+        return b - x;
     }
 
     public int divide(int c) {
