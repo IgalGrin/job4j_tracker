@@ -3,7 +3,6 @@ package ru.job4j.tracker;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.function.IntFunction;
 
 public class Item extends ArrayList<Item> {
     private static final DateTimeFormatter FORMATTER =
@@ -56,10 +55,5 @@ public class Item extends ArrayList<Item> {
                 ", created=" + created.format(FORMATTER)
                 +
                 '}';
-    }
-
-    @Override
-    public <T> T[] toArray(IntFunction<T[]> generator) {
-        return super.toArray(generator);
     }
 }

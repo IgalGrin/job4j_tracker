@@ -25,7 +25,7 @@ public class StartUITest {
         assertThat(tracker.findAll().get(0).getName(), is("Item name"));
     }
 
-    @Test
+   @Test
     public void whenReplaceItem() {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Replaced item"));
@@ -38,7 +38,9 @@ public class StartUITest {
                 new EditAction(out), new ExitAction(out)
         ));
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findById(item.getId()).getName(), is(replacedName));
+       Item result = (Item) tracker.findById(item.getId());
+       assertThat(result.getName(), is(replacedName));
+        /*assertThat(tracker.findById(item.getId()).getName(), is(replacedName));*/
     }
 
    @Test
