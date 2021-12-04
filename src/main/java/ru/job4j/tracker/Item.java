@@ -2,8 +2,10 @@ package ru.job4j.tracker;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.function.IntFunction;
 
-public class Item {
+public class Item extends ArrayList<Item> {
     private static final DateTimeFormatter FORMATTER =
             DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
     private int id;
@@ -54,5 +56,10 @@ public class Item {
                 ", created=" + created.format(FORMATTER)
                 +
                 '}';
+    }
+
+    @Override
+    public <T> T[] toArray(IntFunction<T[]> generator) {
+        return super.toArray(generator);
     }
 }
