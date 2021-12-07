@@ -39,8 +39,6 @@ public class NotifyAccountTest {
                         new Account("142", "Petr Arsentev", "000001")
                 )
         );
-        System.out.println(NotifyAccount.sent(accounts));
-        System.out.println(expect);
         assertThat(NotifyAccount.sent(accounts), is(expect));
     }
 }
