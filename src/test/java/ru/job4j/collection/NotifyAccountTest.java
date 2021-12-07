@@ -30,15 +30,17 @@ public class NotifyAccountTest {
     public void whenDuplicateIsDel() {
         List<Account> accounts = Arrays.asList(
                 new Account("123", "Petr Arsentev", "eDer3432f"),
-                new Account("142", "Petr Arsentev", "000001")
+                new Account("142", "Petr Arsentev", "000001"),
+                new Account("123", "Petr Arsentev", "eDer3432f")
         );
         HashSet<Account> expect = new HashSet<>(
                 Arrays.asList(
                         new Account("123", "Petr Arsentev", "eDer3432f"),
-                        new Account("142", "Petr Arsentev", "000001"),
-                        new Account("123", "Petr Arsentev", "eDer3432f")
+                        new Account("142", "Petr Arsentev", "000001")
                 )
         );
+        System.out.println(NotifyAccount.sent(accounts));
+        System.out.println(expect);
         assertThat(NotifyAccount.sent(accounts), is(expect));
     }
 }
