@@ -8,11 +8,11 @@ import java.util.List;
 
 public class ItemDescByNameTest {
     @Test
-    public void ascendingSort() {
-        List<Item> items = Arrays.asList(new Item("1"), new Item("4"),
-                new Item("3"), new Item("2"), new Item("5"));
-        List<Item> expected = Arrays.asList(new Item("5"), new Item("4"),
-                new Item("3"), new Item("2"), new Item("1"));
+    public void descendingSort() {
+        List<Item> items = Arrays.asList(new Item("Petr2"), new Item("Ivan1"),
+                new Item("Vlad5"), new Item("Vasili4"), new Item("Semen3"));
+        List<Item> expected = Arrays.asList(new Item("Vlad5"), new Item("Vasili4"),
+                new Item("Semen3"), new Item("Petr2"), new Item("Ivan1"));
         Collections.sort(items, new ItemDescByName());
         assert expected.equals(items);
     }
