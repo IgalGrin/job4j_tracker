@@ -22,11 +22,21 @@ public class UserTest {
     }
 
     @Test
-    public void whenComparePertVSIvan() {
+    public void whenComparePetrVSIvan() {
         int rsl = new User("Petr", 32)
                 .compareTo(
                         new User("Ivan", 31)
                 );
         assertThat(rsl, greaterThan(0));
+    }
+
+    @Test
+    public void whenAscPetr33VsPetr31() {
+        Set<User> users = new TreeSet<>();
+        users.add(new User("Petr", 33));
+        users.add(new User("Petr", 31));
+        Iterator<User> it = users.iterator();
+        assertThat(it.next(), is(new User("Petr", 31)));
+        assertThat(it.next(), is(new User("Petr", 33)));
     }
 }
