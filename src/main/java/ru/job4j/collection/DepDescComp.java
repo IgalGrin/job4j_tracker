@@ -1,7 +1,6 @@
 package ru.job4j.collection;
 
 import java.util.Comparator;
-import java.util.Objects;
 
 public class DepDescComp implements Comparator<String> {
     @Override
