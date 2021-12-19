@@ -1,6 +1,7 @@
 package ru.job4j.collection;
 
 import java.util.Comparator;
+import java.util.Objects;
 
 public class DepDescComp implements Comparator<String> {
     @Override
@@ -8,9 +9,6 @@ public class DepDescComp implements Comparator<String> {
         String[] str1 = strOne.split("/");
         String[] str2 = strTwo.split("/");
         int rsl = str2[0].compareTo(str1[0]);
-        if (rsl != 0) {
-            return rsl;
-        }
-        return strOne.compareTo(strTwo);
+        return rsl != 0 ? rsl : strOne.compareTo(strTwo);
     }
 }
