@@ -1,6 +1,5 @@
 package ru.job4j.function;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,8 +18,8 @@ public class FunctionalInterfaces {
         biCon.accept(6, "six");
         biCon.accept(7, "seven");
         System.out.println(map);
+        BiPredicate<Integer, String> biPred = (in, st) -> in % 2 == 0 || st.length() == 4;
         for (Integer i : map.keySet()) {
-            BiPredicate<Integer, String> biPred = (in, st) -> in % 2 == 0 || st.length() == 4;
             if (biPred.test(i, map.get(i))) {
                 System.out.println("key: " + i + " value: " + map.get(i));
             }
@@ -29,5 +28,5 @@ public class FunctionalInterfaces {
         Consumer<String> con = (sf) -> System.out.println(sf);
         Function<String, String> func = s -> s.toUpperCase();
         con.accept(func.apply(String.valueOf(sup.get())));
-        }
     }
+}
