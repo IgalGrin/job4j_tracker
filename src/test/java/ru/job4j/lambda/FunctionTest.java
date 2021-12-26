@@ -34,8 +34,8 @@ public class FunctionTest {
         FunctionUsage function = new FunctionUsage();
         int a = 2;
         int b = 1;
-        List<Double> result = function.diapason(5, 8, x -> a * Math.pow(x, x) + b);
-        List<Double> expected = Arrays.asList(6251D, 93313D, 1647087D);
+        List<Double> result = function.diapason(5, 8, x -> a * Math.pow(2, x) + b);
+        List<Double> expected = Arrays.asList(65D, 129D, 257D);
         assertThat(result, is(expected));
     }
 }
