@@ -78,13 +78,12 @@ public class BankService {
      * возвращает null.
      */
     public Account findByRequisite(String passport, String requisite) {
-        User user = findByPassport(passport);
-        if (user != null) {
-            return users.get(user)
+        Optional<User> user = Optional.ofNullable(findByPassport(passport));
+        if (user.isPresent()) {
+            return users.get(user.get())
                     .stream()
                     .filter(a -> a.getRequisite().equals(requisite))
-                    .findFirst()
-                    .orElse(null);
+                    .findFirst().get();
         }
         return null;
     }
