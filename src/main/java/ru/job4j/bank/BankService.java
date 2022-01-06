@@ -83,7 +83,8 @@ public class BankService {
             return users.get(user.get())
                     .stream()
                     .filter(a -> a.getRequisite().equals(requisite))
-                    .findFirst().get();
+                    .findFirst()
+                    .get();
         }
         return null;
     }
